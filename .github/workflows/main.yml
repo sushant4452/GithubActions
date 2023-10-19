@@ -16,6 +16,6 @@ jobs:
           str="sushant/kumar"
           arr=(${str//\// })
           echo "Second part: ${arr[1]}"
-          echo "::set-env name=SECOND_PART::${arr[1]}"
+          echo "SECOND_PART=${arr[1]}" >> $GITHUB_ENV
         env:
           SECOND_PART: ${{ env.SECOND_PART }}
