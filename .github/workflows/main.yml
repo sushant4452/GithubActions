@@ -17,5 +17,6 @@ jobs:
           arr=(${str//\// })
           echo "Second part: ${arr[1]}"
           echo "SECOND_PART=${arr[1]}" >> $GITHUB_ENV
+          echo ${{github.event.repository.owner.name}}
         env:
           SECOND_PART: ${{ env.SECOND_PART }}
